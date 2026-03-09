@@ -1,0 +1,18 @@
+# Security and Credentials
+certs/
+*.pem
+.env
+
+# Python & Pytest Cache
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.class
+
+# Test Reports and Artifacts
+report.html
+screenshots/
+assets/
+
+# System Files
+.DS_Store

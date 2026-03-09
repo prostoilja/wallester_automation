@@ -1,0 +1,17 @@
+# Core testing framework (downgraded for playwright compatibility)
+pytest==8.3.4
+
+# API testing and HTTP requests
+requests==2.32.5
+
+# RSA Encryption and Security
+pycryptodome==3.23.0
+
+# Environment variables management
+python-dotenv==1.2.2
+
+# HTML Reporting
+pytest-html==4.2.0
+
+# UI Testing (Playwright)
+pytest-playwright==0.6.2
