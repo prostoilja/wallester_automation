@@ -19,8 +19,12 @@ jobs:
         run: mkdir -p certs
 
       - name: Setup Private Key from Secrets
-        # Эта магия берет секрет из GitHub и создает файл private.pem
-        run: echo "${{ secrets.RSA_PRIVATE_KEY }}" > certs/private.pem
+        shell: bash
+        run: |
+          # Записываем секрет в файл. Кавычки вокруг переменной сохраняют переносы строк.
+          echo "${{ secrets.RSA_PRIVATE_KEY }}" > certs/private.pem
+          # Устанавливаем права доступа (стандарт для ключей)
+          chmod 600 certs/private.pem
 
       - name: Build Docker image
         run: docker build -t wallester-tests .
